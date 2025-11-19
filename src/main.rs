@@ -1,6 +1,9 @@
 use macroquad::prelude::*;
 
-#[macroquad::main("Hello World")]
+mod entities;
+mod dialog;
+
+#[macroquad::main("Bytesy")]
 async fn main() {
     loop {
         clear_background(WHITE);
