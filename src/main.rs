@@ -2,8 +2,10 @@
 
 use macroquad::prelude::*;
 
-mod entities;
 mod dialog;
+mod entities;
+mod game;
+mod rooms;
 
 #[macroquad::main("Bytesy")]
 async fn main() {
