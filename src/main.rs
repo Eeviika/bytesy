@@ -1,3 +1,5 @@
+#![cfg_attr(not(any(debug_assertions, test)), deny(clippy::unwrap_used, clippy::expect_used))]
+
 use macroquad::prelude::*;
 
 mod entities;
