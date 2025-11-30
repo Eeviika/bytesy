@@ -6,6 +6,7 @@ mod dialog;
 mod entities;
 mod game;
 mod rooms;
+mod rendering;
 
 #[macroquad::main("Bytesy")]
 async fn main() {
