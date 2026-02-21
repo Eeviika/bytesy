@@ -1,12 +1,15 @@
-#![cfg_attr(not(any(debug_assertions, test)), deny(clippy::unwrap_used, clippy::expect_used))]
+#![cfg_attr(
+    not(any(debug_assertions, test)),
+    deny(clippy::unwrap_used, clippy::expect_used)
+)]
 
 use macroquad::prelude::*;
 
 mod dialog;
 mod entities;
 mod game;
-mod rooms;
 mod rendering;
+mod rooms;
 
 #[macroquad::main("Bytesy")]
 async fn main() {

@@ -37,4 +37,3 @@ pub struct Room {
     endings: [[Option<EndingId>; 16]; 16],
     avatar: Option<(u16, u16)>,
 }
-

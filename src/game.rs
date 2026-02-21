@@ -53,7 +53,6 @@ pub struct World {
 }
 /* #endregion */
 
-/* #region Implementations */
 impl ColorPalette {
     pub fn type_to_color(&self, color_type: ColorType) -> Color {
         match color_type {
@@ -85,12 +84,36 @@ impl Default for ColorPalette {
     fn default() -> Self {
         ColorPalette {
             name: "Terminal".into(),
-            transparency: Color { r: 0.0, g: 0.0, b: 0.0, a: 0.0 },
-            background: Color { r: 0.0, g: 0.0, b: 0.0, a: 1.0 },
-            tile: Color { r: 0.5, g: 0.5, b: 0.5, a: 1.0 },
-            sprite: Color { r: 1.0, g: 1.0, b: 1.0, a: 1.0 },
-            avatar: Color { r: 0.8, g: 1.0, b: 0.8, a: 1.0 }
+            transparency: Color {
+                r: 0.0,
+                g: 0.0,
+                b: 0.0,
+                a: 0.0,
+            },
+            background: Color {
+                r: 0.0,
+                g: 0.0,
+                b: 0.0,
+                a: 1.0,
+            },
+            tile: Color {
+                r: 0.5,
+                g: 0.5,
+                b: 0.5,
+                a: 1.0,
+            },
+            sprite: Color {
+                r: 1.0,
+                g: 1.0,
+                b: 1.0,
+                a: 1.0,
+            },
+            avatar: Color {
+                r: 0.8,
+                g: 1.0,
+                b: 0.8,
+                a: 1.0,
+            },
         }
     }
 }
-/* #endregion */

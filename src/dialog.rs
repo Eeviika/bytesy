@@ -12,6 +12,11 @@ pub struct Dialog {
 
 impl Default for Dialog {
     fn default() -> Self {
-        Dialog { name: "dialogue".to_string(), dialogue: vec![DialogElement::Dialog { text: "Hello, World!".to_string() }] }
+        Dialog {
+            name: "dialogue".to_string(),
+            dialogue: vec![DialogElement::Dialog {
+                text: "Hello, World!".to_string(),
+            }],
+        }
     }
 }
