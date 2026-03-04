@@ -1,6 +1,6 @@
 use macroquad::math::IVec2;
 
-use crate::game::{DialogId, EndingId, ExitId, ItemId, NpcId, TileId};
+use crate::game::{ColorPalette, DialogId, EndingId, ExitId, ItemId, NpcId, TileId};
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum TransitionEffect {
@@ -27,7 +27,7 @@ pub struct Ending {
     dialog_id: DialogId,
 }
 
-#[derive(Clone, Debug, Default, PartialEq, Eq)]
+#[derive(Clone, Debug, Default, PartialEq)]
 pub struct Room {
     name: String,
     tiles: [[Option<TileId>; 16]; 16],
@@ -36,4 +36,5 @@ pub struct Room {
     exits: [[Option<ExitId>; 16]; 16],
     endings: [[Option<EndingId>; 16]; 16],
     avatar: Option<(u16, u16)>,
+    color_palette: ColorPalette,
 }
