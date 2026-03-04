@@ -1,4 +1,3 @@
-/* #region Usages */
 use macroquad::color::Color;
 use slotmap::SlotMap;
 
@@ -7,9 +6,8 @@ use crate::{
     entities::{Avatar, Item, Npc, Tile},
     rooms::{Ending, Exit, Room},
 };
-/* #endregion */
 
-/* #region Keys */
+// region Keys
 slotmap::new_key_type! { pub struct TileId; }
 slotmap::new_key_type! { pub struct RoomId; }
 slotmap::new_key_type! { pub struct NpcId; }
@@ -18,9 +16,10 @@ slotmap::new_key_type! { pub struct ExitId; }
 slotmap::new_key_type! { pub struct EndingId; }
 slotmap::new_key_type! { pub struct DialogId; }
 slotmap::new_key_type! { pub struct PaletteId; }
-/* #endregion */
+slotmap::new_key_type! { pub struct SoundId; }
+// endregion
 
-/* #region Structs */
+// region Structs
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ColorType {
     Background,
@@ -41,6 +40,7 @@ pub struct ColorPalette {
 
 #[derive(Clone, Debug)]
 pub struct World {
+    name: String,
     tiles: SlotMap<TileId, Tile>,
     rooms: SlotMap<RoomId, Room>,
     npcs: SlotMap<NpcId, Npc>,
@@ -51,8 +51,9 @@ pub struct World {
     palettes: SlotMap<PaletteId, ColorPalette>,
     avatar: Avatar,
 }
-/* #endregion */
+// endregion
 
+// region Implementations
 impl ColorPalette {
     pub fn type_to_color(&self, color_type: ColorType) -> Color {
         match color_type {
@@ -117,3 +118,4 @@ impl Default for ColorPalette {
         }
     }
 }
+// endregion

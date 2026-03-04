@@ -1,6 +1,6 @@
-use crate::game::{ColorType, DialogId};
+use crate::game::{ColorType, DialogId, SoundId};
 
-/// Data for an 8x8 texture.
+/// Data for an eight by eight (8x8) texture.
 ///
 /// `TileData` represents a small, 8x8, boolean pixel texture that can be
 /// used by tiles, NPCs, and other engine elements. Each pixel is stored as a
@@ -58,7 +58,7 @@ pub struct Avatar {
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct Npc {
     pub entity: Entity,
-    pub interact_sound_id: Option<u32>, // todo: make a SoundId type
+    pub interact_sound_id: Option<SoundId>,
     pub dialog_id: Option<DialogId>,
     pub enabled: bool,
 }
